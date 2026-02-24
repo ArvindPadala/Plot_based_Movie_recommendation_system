@@ -16,7 +16,16 @@ def main():
         uses advanced **Transformer models** to find movies based purely on their narrative plot.
     """)
 
-    # --- 1. Load Models ---
+    # --- 1. Check Data Availability ---
+    import os
+    from src import config
+    if not os.path.exists(config.FAISS_INDEX_PATH) or not os.path.exists(config.GENRE_MODEL_PATH):
+        st.error("🚨 **Error: Required models and datasets not found locally!**")
+        st.write("Since the machine learning models and data exceed GitHub's file limits, they must be downloaded from Hugging Face.")
+        st.info("### How to fix this:\nOpen your terminal, navigate to this project's folder, and run:\n```bash\npython download_data.py\n```\nAfter the download completes, refresh this page!")
+        st.stop()
+
+    # --- 2. Load Models ---
     try:
         models = load_models_and_data()
     except Exception as e:
@@ -25,7 +34,7 @@ def main():
 
     st.divider()
 
-    # --- 2. User Input ---
+    # --- 3. User Input ---
     st.subheader("What kind of movie are you looking for?")
     user_query = st.text_area(
         "Describe the plot or themes you want to watch:",

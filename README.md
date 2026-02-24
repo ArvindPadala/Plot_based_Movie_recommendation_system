@@ -72,6 +72,12 @@ Ensure you have Python 3.10+ installed.
    pip install -r requirements.txt
    ```
 
+3. **Download the Machine Learning Models:**
+   Because the tuned Transformer models and FAISS indexes are over 500MB, they are hosted on Hugging Face. Run the automated script to securely download them into the local `data/` directory:
+   ```bash
+   python download_data.py
+   ```
+
 ### Running the Application
 
 To launch the web interface locally, simply run:
