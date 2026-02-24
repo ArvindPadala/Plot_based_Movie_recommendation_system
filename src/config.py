@@ -1,7 +1,7 @@
 import os
 
-# Base directory for the data and models
-BASE_DATA_DIR = "/Users/arvindpadala/Documents/projects/Movie Recommendation System/Stat_Software_Project_demo"
+# Base directory for the data and models (relative to project root)
+BASE_DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
 # Paths to models
 GENRE_MODEL_PATH = os.path.join(BASE_DATA_DIR, "ex_finetuned_distilbert_genre/fine_tuned_distilbert_model_final")
