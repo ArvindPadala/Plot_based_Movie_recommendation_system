@@ -1,4 +1,4 @@
-# 🎬 Plot-Based Movie Recommendation System
+# 🎬 Transformer-Powered Semantic Movie Recommendation System
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.28.0-red.svg)](https://streamlit.io/)

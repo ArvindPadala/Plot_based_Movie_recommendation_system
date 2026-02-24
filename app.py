@@ -4,12 +4,12 @@ from src.engine import classify_genre, find_top_k_matches, answer_qa
 
 def main():
     st.set_page_config(
-        page_title="Plot-Based Movie Recommender",
+        page_title="Semantic Movie Recommender",
         page_icon="🎬",
         layout="centered"
     )
 
-    st.title("🎬 Plot-Based Movie Recommendation System")
+    st.title("🎬 Transformer-Powered Semantic Movie Recommendation System")
     st.markdown("""
         **Discover movies based on the story you want to see!**
         Unlike traditional recommendation systems that rely on ratings or viewing history, this system 
